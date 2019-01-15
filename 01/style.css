@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+body { 
+  background: #4286f4;
+  color: white;
+  font-family: 'VT323', monospace;
+  font-size: 35px;
+  text-align: center;
+}
+
+.profil {
+  position: relative;
+  background: white;
+  width: 90%;
+  left: 5%;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #353535;
+  display: flex;
+}
+
+.pic {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  padding: 5%;
+}
+
+.info {
+  width: 50%;
+  height: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5%;
+}
+
+img { 
+  position: relative;
+  width: 75%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+}
+
+.buttons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+button {
+  background-color: #4286f4; 
+  border: none;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 2%; 
+}
+
+a {
+  font-family: 'VT323', monospace;
+  text-decoration: none;  
+  color: white;
+  font-size: 20px;
+}
+
+button:hover {
+  background: black;
+  color: #4286f4;
+  transform: scale(0.90);
+}
