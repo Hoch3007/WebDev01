@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+body { 
+  background: #4286f4;
+  color: white;
+  font-family: 'VT323', monospace;
+  font-size: 35px;
+  text-align: center;
+}
+
+.navigation {
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    position: fixed;
+   
+    z-index:3;
+    width: 100%;
+    left:0;
+    right:0;
+    
+
+}
+
+nav {
+    
+    width: 50%;
+
+}
+
+h1 {
+    
+    width: 50%;
+
+
+    
+}
+
+.navigation ul {
+
+    list-style: none;
+    
+}
+
+.navigation li {
+
+    display: inline-block;
+    
+}
+
+
+.navigation li:hover {
+
+    color: black;
+
+}
+
+.profil {
+  position: relative;
+  top: 150px;
+  background: white;
+  width: 90%;
+  left: 5%;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #353535;
+  display: flex;
+  z-index:1;
+}
+
+.pic {
+  width: 50%;
+  height: auto;
+  text-align: center;
+  padding: 5%;
+}
+
+.info {
+  width: 50%;
+  height: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5%;
+}
+
+.slider-holder {
+            width: 300px;
+            height: auto;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 2px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }   
+.image-holder {
+            width: 900px;
+            background-color: #4286f4;
+            height: auto;
+            clear: both;
+            position: relative;
+            transition: left 2s;
+        }     
+.slider-image {
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+        }     
+#slider-image-1:target ~ .image-holder {
+            left: 0px;
+        }     
+#slider-image-2:target ~ .image-holder {
+            left: -300px;
+        }     
+#slider-image-3:target ~ .image-holder{
+            left: -600px;
+        }     
+.button-holder {
+            position: relative;
+            top: -10px;
+        }     
+.slider-change {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            border-radius: 5px;
+            background-color: black;
+            margin-top: 5px;
+}
+
+img {
+  width: 300px;
+  height: auto;
+}
+
+.buttons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+button {
+  background-color: #4286f4; 
+  border: none;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 2%; 
+}
+
+button a {
+  font-family: 'VT323', monospace;
+  text-decoration: none;  
+  color: white;
+  font-size: 20px;
+}
+
+button:hover {
+  background: black;
+  color: #4286f4;
+  transform: scale(0.90);
+}
