@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+  border: lightgrey solid 1px;
+  border-radius: 8px;
+  width: 35%;
+  height: 50%;
+  padding: 2%;
+  position: absolute;
+  left: 32.5%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+footer {
+  position: absolute;
+  width: 36%;
+  font-size: 75%;
+  margin: 1%;
+  top: 75%;
+  left: 33%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  width:20%;
+  height: auto; 
+}
+
+h1 {
+  font-size: 140%;  
+}
+
+form {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+select {
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(https://img.icons8.com/metro/32/000000/expand-arrow.png);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+  background-size: 15%;
+}
+
+form > select {
+  width: 100%;
+  appearance: none;
+  border: lightgrey 1px solid;
+  border-radius: 25px;
+  padding:10px;
+  color: black;
+  background-size: 7%;
+  font-family: 'Ubuntu', sans-serif;  
+}
+
+footer>select {
+  border:none;
+}
+
+div > img {
+  height: 25px;
+  width: auto;
+  padding: 10px;
+}
+
+input[type="password"] {
+  border: none;
+  padding: 15px;
+
+}
+
+input[type="submit"] {
+  background: #454e9e;
+  border: None;
+  border-radius: 3px;
+  width: 100px;
+  height: 35px;
+  color: white;
+  font-size:15px;
+  margin-left:5px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+input[type="submit"]:hover {
+  
+  background: green;
+}
+
+ul {
+  list-style-type: none;
+  display: inline;
+}
+
+li {
+  display: inline;
+  padding:5px;
+  
+}
+
+p {
+  font-size: 65%;
+  position: fixed;
+  bottom:0;
+  
+}
+
+.password_input {
+  diplay: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  width: 115%;
+  left: -5%;
+}
+
+.password_eye {
+  border: #454e9e solid 2px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.annotation {
+  position: absolute;
+  color: #454e9e;
+  font-size: 75%;
+  background: white;
+  top: -8%;
+  left: 5%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.password_send {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  left: 0%; 
+}
+
+.password_help {
+  color: #454e9e;
+  font-size: 90%;
+  padding: 5px;  
+}
+
+.password_help:hover {
+  background: #F0F0F7;
+  border-radius: 3px; 
+}
