@@ -19,6 +19,64 @@ main {
   align-items: center;
 }
 
+nav {
+  position: absolute;
+  top:0;
+  right: 10px;
+  flex-direction: column;
+}
+
+nav> img {
+  position: absolute;
+  width: 25%;
+  margin-top: 10px;
+  margin-right: 0;
+ 
+  right:0px;
+}
+
+
+nav>img:hover {
+
+  transform: rotate(90deg);
+
+}
+
+nav>img:hover ~ ul {
+
+
+
+}
+
+nav >ul {
+  position: relative;
+  display: block;
+  visibility: hidden;
+  margin-top: 50px;
+  
+
+}
+
+nav>ul>li {
+  display: block;
+  font-weight: bold;
+  vertical-align: baseline;
+
+
+}
+
+li>a {
+  text-decoration: None;
+  padding-left: 15px;
+  vertical-align: baseline;
+  color: black;
+}
+
+li>img {
+  vertical-align: baseline;
+
+}
+
 footer {
   position: absolute;
   width: 36%;
@@ -82,6 +140,12 @@ input[type="password"] {
   border: none;
   padding: 15px;
 
+}
+
+input[type="text"] {
+  border: none;
+  padding: 15px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 input[type="submit"] {
@@ -167,4 +231,19 @@ p {
 .password_help:hover {
   background: #F0F0F7;
   border-radius: 3px; 
+}
+
+.eyes {
+    position: relative;
+    width: 20%;
+    height: 45px;
+    background: url(https://img.icons8.com/windows/32/000000/invisible.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.eyes:hover {
+  background: url(https://img.icons8.com/windows/32/000000/visible.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
