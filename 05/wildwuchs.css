@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Caveat+Brush");
+@import url("https://fonts.googleapis.com/css?family=Muli");
+@media only screen and (min-width: 850px) {
+  main {
+    width: 850px;
+  }
+}
+body {
+  font-family: 'Muli', sans-serif;
+  color: #223833;
+}
+
+h1 {
+  color: #223833;
+  /* Fallback: assume this color ON TOP of image */
+  background: url(https://images.unsplash.com/photo-1445264718234-a623be589d37?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 850px 200px;
+}
+
+footer {
+  background: #c4d9b0;
+  text-align: center;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+footer > a:hover, .card-link:hover, a:hover {
+  text-decoration: None;
+  color: #425022;
+  text-shadow: 2px 2px 2px #425022;
+}
+
+footer > a, .card-link, a {
+  text-decoration: None;
+  color: #223833;
+}
+
+.mb-0 .btn-link:hover, .mb-0 .btn-link:focus {
+  color: #223833;
+  text-decoration: None;
+}
+
+.jumbotron h1 {
+  font-size: 6em;
+  text-align: center;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  font-family: 'Caveat Brush', cursive;
+}
+
+.jumbotron > p {
+  text-align: center;
+}
+
+.carousel_row {
+  margin-top: 0px;
+}
+
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.row .col-sm-6, .col-sm-12 {
+  margin-top: 50px;
+}
+
+.btn {
+  background: #425022;
+  border: #425022 solid;
+  color: white;
+}
+
+.btn:hover, btn:focus, .navbar .navbar-toggle:hover, .navbar .navbar-toggle:focus {
+  background: #c4d9b0;
+  border: #c4d9b0 solid;
+  color: #223833;
+}
+
+.navbar {
+  background: None;
+  border: None;
+  box-shadow: None;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .container-fluid .nav li a:hover {
+  color: #425022;
+  text-shadow: 2px 2px 2px #425022;
+}
+
+.navbar .navbar-toggle .icon-bar {
+  background: white;
+}
+
+.navbar .navbar-toggle {
+  background: #425022;
+  border: #425022 solid;
+}
+
+.portrait {
+  height: 150px;
+  width: 300px;
+}
+
+.up {
+  display: flex;
+  justify-content: center;
+}
+
+#myCarousel {
+  height: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+}
