@@ -1,18 +1,13 @@
 if __name__ == "__main__":
     
-    mood = raw_input("How's your mood today? Choose from: sad, happy, nervous, excited, relaxed. Your choice: " )
+    mood = input("How's your mood today? Choose from: sad, happy, nervous, excited, relaxed. Your choice: " )
     
-    moods = ["sad"," happy", "nervous","excited", "relaxed"]
-    
-    if mood == moods[0]:
-        print "Don't be! Life is beautiful."
-    elif mood == moods[1]:
-        print "It is great to see you happy!"
-    elif mood == moods[2]:
-        print "Take a deep breath 3 times."
-    elif mood == moods[3]:
-        print "Great. I hope it's positive excitement."
-    elif mood == moods[4]:
-        print "Cool."
+    moods = {"sad": "Don't be! Life is beautiful.", "happy": "It is great to see you happy!",
+             "nervous": "Take a deep breath 3 times.",
+             "excited": "Great. I hope it's positive excitement.", "relaxed": "Cool."}
+
+    if mood in moods:
+        print(moods[mood])
     else:
-        print "I don't recognize this mood."
+        print("I don't recognize this mood.")
+
