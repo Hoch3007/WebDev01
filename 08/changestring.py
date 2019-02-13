@@ -1,21 +1,22 @@
 def change_string(string, operation):
 
     if operation == "uppercase":
-        print string.upper()
+        print(string.upper())
     elif operation == "lowercase":
-        print string.lower()
+        print(string.lower())
     elif operation == "join":
         string = string.split(" ")
         
-        print "".join(string)
+        print("".join(string))
     
     else:
-        print "Operation not possible."
+        print("Operation not possible.")
+
 
 if __name__ == "__main__":
-    
-    string = raw_input("What words or sentences would you like to change?  " )
-    operation = raw_input("What would you like to do? uppercase, lowercase, join " )
+
+    string = input("What words or sentences would you like to change?  ")
+    operation = input("What would you like to do? uppercase, lowercase, join ")
     
     change_string(string,operation)
     
@@ -23,17 +24,17 @@ if __name__ == "__main__":
     
     while again:
         
-        answer = raw_input("Would you like to change another text! y/n" )
+        answer = input("Would you like to change another text! y/n")
         
         answer = answer.lower()
     
         if answer == "n":
             again = False
-            print "Bye!"
+            print("Bye!")
         
         else:
            
-            string = raw_input("What words or sentences would you like to change?  " )
-            operation = raw_input("What would you like to do? uppercase, lowercase, join " )
+            string = input("What words or sentences would you like to change?  ")
+            operation = input("What would you like to do? uppercase, lowercase, join ")
     
-            change_string(string,operation) 
+            change_string(string, operation)
