@@ -8,7 +8,7 @@ if __name__ == "__main__":
     
         number = raw_input("Select a number between 1 and 100! " )
         
-        for i in range(1,int(number)):
+        for i in range(1,int(number)+1):
         
             if i%15==0:
                 print "fizzbuzz"
