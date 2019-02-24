@@ -1,6 +1,9 @@
 def create_number(difficulty):
     
     import random
+
+    secret=0
+    max_attempt = 0
     
     if difficulty=="easy":
         secret = random.randint(0,10)
@@ -18,10 +21,10 @@ def create_number(difficulty):
         upper=100
         
     else:
-        print 'Unknown difficulty! Difficulty is set to "easy".'
-        
-    
+        print('Unknown difficulty! Difficulty is set to "easy".')
+
     return secret, max_attempt, upper
+
 
 def load_scores(difficulty):
     
@@ -33,10 +36,14 @@ def load_scores(difficulty):
         
     return scores
 
+
 def save_score(difficulty, scores):
+
+    import json
     
     with open("scores_"+str(difficulty)+".json", "w") as f:
         json.dump(scores,f)
+
 
 def play(difficulty="easy"):
     
@@ -45,8 +52,8 @@ def play(difficulty="easy"):
     
     secret, max_attempt, upper = create_number(difficulty)
     
-    print "You've got " + str(max_attempt) + " attempts to guess."
-    print "Guess my secret number between 0 an "+ str(upper)+"!"
+    print("You've got " + str(max_attempt) + " attempts to guess.")
+    print("Guess my secret number between 0 an "+ str(upper)+"!")
     
     scores = load_scores(difficulty)
     
@@ -56,11 +63,11 @@ def play(difficulty="easy"):
         
         attempt +=1
         
-        guess = raw_input("What's your guess? ")
+        guess = input("What's your guess? ")
     
         if int(guess)==secret:
-            print "Great, you're right. That's my number."
-            print "It took you "+ str(attempt) + " attempts."
+            print("Great, you're right. That's my number.")
+            print("It took you "+ str(attempt) + " attempts.")
             
             scores[str(now)]=attempt
             
@@ -69,14 +76,14 @@ def play(difficulty="easy"):
             break
             
         else:
-            print "Sorry, that's wrong."
+            print("Sorry, that's wrong.")
             
             if int(guess)<secret: 
-                print "Guess higher!"
+                print("Guess higher!")
             elif int(guess)>secret:
-                print "Guess lower!"
+                print("Guess lower!")
             else:
-                print "I've got a problem! Please start the game again!"
+                print("I've got a problem! Please start the game again!")
                 break
 
 def highscore(difficulty):
@@ -90,30 +97,35 @@ def highscore(difficulty):
     
     if len(sorted_scores)>=3:
     
-        print "--------------- Top 3 -----------------"
-        print "First place: ", sorted_scores[0]
-        print "Second place: ", sorted_scores[1]
-        print "Third place: ", sorted_scores[2]
+        print("--------------- Top 3 -----------------")
+        print("First place: ", sorted_scores[0])
+        print("Second place: ", sorted_scores[1])
+        print("Third place: ", sorted_scores[2])
         
     else:
         
-        print "There are no TOP 3, please play again!"
+        print("There are no TOP 3, please play again!")
         
        
- if __name__ == "__main__":
+def main():
+
+
     
-    print "Welcome to: GUESSING GAME!"       
+    print("Welcome to: GUESSING GAME!")
     
-    difficulty = raw_input("Which difficulty would you like to play: easy, medium, hard? ")
+    difficulty = input("Which difficulty would you like to play: easy, medium, hard? ")
     
     play(difficulty)
     
-    best_score = raw_input("Would you like to see the highscores? y/n ")
+    best_score = input("Would you like to see the highscores? y/n ")
     
-    if best_score=="y":
+    if best_score == "y":
         
         highscore(difficulty)
     
     else:
         
-        print "Thanks for playing!"
+        print("Thanks for playing!")
+
+
+main()
