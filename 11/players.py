@@ -1,5 +1,4 @@
-# object einfügen wegen python 2.7, in python 3.7 nicht notwendig
-class Player(object):
+class Player():
     def __init__(self, first_name, last_name, height_cm, weight_kg):
         self.first_name = first_name
         self.last_name = last_name
@@ -13,8 +12,7 @@ class Player(object):
     
 class BasketballPlayer(Player):
     def __init__(self, first_name, last_name, height_cm, weight_kg, points, rebounds, assists):
-        # BasketballPlayer, self wegen python 2.7, in 3.7 kann Null-Argument gemacht werden
-        super(BasketballPlayer, self).__init__(first_name=first_name, last_name=last_name, height_cm=height_cm, weight_kg=weight_kg)
+        super().__init__(first_name=first_name, last_name=last_name, height_cm=height_cm, weight_kg=weight_kg)
         self.points = points
         self.rebounds = rebounds
         self.assists = assists
@@ -36,7 +34,7 @@ class BasketballPlayer(Player):
 
 class FootballPlayer(Player):
     def __init__(self, first_name, last_name, height_cm, weight_kg, goals, yellow_cards, red_cards):
-        super(FootballPlayer, self).__init__(first_name=first_name, last_name=last_name, height_cm=height_cm, weight_kg=weight_kg)
+        super().__init__(first_name=first_name, last_name=last_name, height_cm=height_cm, weight_kg=weight_kg)
         self.goals = goals
         self.yellow_cards = yellow_cards
         self.red_cards = red_cards
@@ -55,40 +53,37 @@ class FootballPlayer(Player):
         with open("players_football.json", "w") as f:
             json.dump(players,f)
 
-            
-            
+
 def add_player(sport):
     
-    first_name = raw_input("What's the first name of the player? ")
-    last_name = raw_input("What's the last name of the player? ")
-    height_cm = raw_input("What's the player's height in cm? ")
-    weight_kg = raw_input("What's the player's weight in kg? ")
+    first_name = input("What's the first name of the player? ")
+    last_name = input("What's the last name of the player? ")
+    height_cm = input("What's the player's height in cm? ")
+    weight_kg = input("What's the player's weight in kg? ")
     
     if sport == "basketball":
-        points = raw_input("How many points? ")
-        rebounds = raw_input("How many rebounds? ")
-        assists = raw_input("How many assists? ")
+        points = input("How many points? ")
+        rebounds = input("How many rebounds? ")
+        assists = input("How many assists? ")
         
         player = BasketballPlayer(first_name=first_name, last_name=last_name, height_cm=height_cm, weight_kg=weight_kg, points=points, rebounds=rebounds, assists=assists)
         
     else:
         
-        goals = raw_input("How many goals? ")
-        yellow_cards = raw_input("How many yellow cards? ")
-        red_cards = raw_input("How many red cards? ")
+        goals = input("How many goals? ")
+        yellow_cards = input("How many yellow cards? ")
+        red_cards = input("How many red cards? ")
         
         player = FootballPlayer(first_name=first_name, last_name=last_name, height_cm=height_cm, weight_kg=weight_kg, goals=goals, yellow_cards=yellow_cards, red_cards=red_cards)
-        
-    
+
     player.save()
     
- 
 
 def player_database():
     
-    print "--- The Basketball & Football Player Database ---"
+    print("--- The Basketball & Football Player Database ---")
        
-    sport = raw_input("In which sport is the player active? football/basketball ")
+    sport = input("In which sport is the player active? football/basketball ")
     sport = sport.lower()
     
     add_player(sport)
@@ -98,19 +93,20 @@ def player_database():
     answers = ["y", "n"]
     answer = 0
     
-    while c!="n":
+    while c != "n":
         
         while answer not in answers:
-            answer = raw_input("Would you like to add another player? y/n ")
+            answer = input("Would you like to add another player? y/n ")
         
         if answer == "y":
-            sport = raw_input("In which sport is the player active? football/basketball ")
+            sport = input("In which sport is the player active? football/basketball ")
             sport = sport.lower()
     
             add_player(sport)
         
-        c= answer
+        c = answer
         
-    print "Thanks for using the database!"
-    
+    print("Thanks for using the database!")
+
+
 player_database()

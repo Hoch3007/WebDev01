@@ -39,7 +39,7 @@ def create_number(difficulty):
         upper=100
         
     else:
-        print 'Unknown difficulty! Difficulty is set to "easy".'
+        print('Unknown difficulty! Difficulty is set to "easy".')
         
     
     return secret, max_attempt, upper
@@ -51,8 +51,8 @@ def play(difficulty="easy", player_name = "Unknown"):
     
     secret, max_attempt, upper = create_number(difficulty)
     
-    print "You've got " + str(max_attempt) + " attempts to guess."
-    print "Guess my secret number between 0 an "+ str(upper)+"!"
+    print("You've got " + str(max_attempt) + " attempts to guess.")
+    print("Guess my secret number between 0 an "+ str(upper)+"!")
 
     attempt = 0
 
@@ -60,11 +60,11 @@ def play(difficulty="easy", player_name = "Unknown"):
         
         attempt +=1
         
-        guess = raw_input("What's your guess? ")
+        guess = input("What's your guess? ")
     
         if int(guess)==secret:
-            print "Great, you're right. That's my number."
-            print "It took you "+ str(attempt) + " attempts."
+            print("Great, you're right. That's my number.")
+            print("It took you "+ str(attempt) + " attempts.")
             
             victory = result(score= attempt, player_name= player_name, date= str(now), difficulty=difficulty)
             victory.save()
@@ -72,25 +72,25 @@ def play(difficulty="easy", player_name = "Unknown"):
             break
             
         else:
-            print "Sorry, that's wrong."
+            print("Sorry, that's wrong.")
             
             if int(guess)<secret: 
-                print "Guess higher!"
+                print("Guess higher!")
             elif int(guess)>secret:
-                print "Guess lower!"
+                print("Guess lower!")
             else:
-                print "I've got a problem! Please start the game again!"
+                print("I've got a problem! Please start the game again!")
                 break
 
 def main():
     
-    print "Welcome to: GUESSING GAME!"       
+    print("Welcome to: GUESSING GAME!")
     
-    player_name = raw_input("What's your name? ")
-    difficulty = raw_input("Which difficulty would you like to play: easy, medium, hard? ")
+    player_name = input("What's your name? ")
+    difficulty = input("Which difficulty would you like to play: easy, medium, hard? ")
     
     play(difficulty, player_name)
       
-    print "Thanks for playing!"
+    print("Thanks for playing!")
 
 main()
