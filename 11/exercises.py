@@ -49,6 +49,7 @@ class Car(object):
         self.battery_status += 1
         return self
 
+
 golf = Car()
 
 print(golf.battery_status)
@@ -66,5 +67,6 @@ def check_battery():
     assert (car.battery_status == 100), "Battery increase does not work."
     assert (car.decrease_battery().battery_status == 99)
     assert (car.increase_battery().battery_status == 100)
+
 
 check_battery()
